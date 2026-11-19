@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Descubre el catálogo de MICHOKS: whiskys, vinos, cervezas y licores. Consulta disponibilidad y registra pedidos para retiro o entrega.">
+  <meta name="theme-color" content="#171b17">
+  <title>MICHOKS | Tu próximo brindis empieza aquí</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="icon" href="assets/michoks-logo.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/michoks-bar.jpg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <section id="age-gate" class="age-gate" aria-labelledby="age-title" aria-describedby="age-description">
+    <div class="age-card">
+      <img src="assets/michoks-logo.svg" width="64" height="64" alt="MICHOKS">
+      <p class="eyebrow">BIENVENIDO A MICHOKS</p>
+      <h2 id="age-title">¿Tienes 18 años<br>o más?</h2>
+      <p id="age-description">Nuestro catálogo de licores está dirigido exclusivamente a personas adultas. Confirma tu edad para continuar.</p>
+      <div class="age-actions"><button id="age-accept" class="primary-button" type="button" disabled>Sí, tengo 18 años o más <span aria-hidden="true">↗</span></button><a id="age-decline" class="age-decline" href="https://www.vita.com.ec/">No, soy menor de 18 años <span aria-hidden="true">↗</span></a></div>
+      <noscript><p>Activa JavaScript para confirmar tu edad y entrar a MICHOKS.</p></noscript>
+    </div>
+  </section>
+  <div id="age-content" hidden>
+  <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+  <div class="notice-bar"><span>BUENAS BOTELLAS. BUENOS MOMENTOS.</span><span class="hidden sm:block">Disfruta con responsabilidad · +18</span></div>
+  <header class="michoks-header">
+    <div class="shell flex items-center justify-between gap-4">
+      <a class="brand" href="#inicio" aria-label="MICHOKS, inicio"><img src="assets/michoks-logo.svg" width="44" height="44" alt=""><span>MICHOKS<small>LICORERÍA<span class="brand-motto"> · BUENOS MOMENTOS</span></small></span></a>
+      <nav id="main-nav" class="michoks-nav" aria-label="Navegación principal"><a href="#catalogo">El catálogo</a><a href="#destacados">Descubre</a><a href="#nosotros">Acerca de nosotros</a></nav>
+      <div class="flex items-center gap-2"><a id="account-link" class="text-link" href="?vista=cuenta">Ingresar</a><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 15a8.5 8.5 0 0 1-11-11A8.5 8.5 0 1 0 20 15Z"></path></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"></path></svg></button><button class="menu-button" type="button" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><button class="cart-button" type="button" hidden aria-controls="cart-drawer" aria-haspopup="dialog" aria-label="Abrir carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg><span class="hidden sm:inline">Mi carrito</span><span id="cart-count">0</span></button></div>
+    </div>
+  </header>
+  <main id="inicio">
+    <section class="michoks-hero" aria-labelledby="hero-title">
+      <img class="hero-photo" src="assets/michoks-bar.jpg" width="1600" height="1069" alt="Preparación de un cóctel con hielo y piel de naranja" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="shell hero-layout relative">
+        <div class="hero-content"><p class="eyebrow"><span class="little-dot"></span> TU LICORERÍA, A UN CLIC</p><h1 id="hero-title">Elige tu<br>próximo<br><em>brindis.</em></h1><p class="hero-description">Los clásicos de siempre. Tu próxima botella favorita.<br class="hidden sm:block"> Encuentra lo que va contigo en MICHOKS.</p><div class="hero-actions"><a class="primary-button" href="#catalogo">Descubrir el catálogo <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="#destacados">Encuentra tu estilo <span aria-hidden="true">↓</span></a></div><p class="hero-footnote"><span aria-hidden="true">✦</span> Guarda tu carrito y sigue tus pedidos desde tu cuenta.</p></div>
+        <div class="hero-caption"><span class="eyebrow">EL ARTE DE ELEGIR BIEN</span><p>La botella correcta.<br>El momento perfecto.</p><a href="#destacados" aria-label="Descubre la selección MICHOKS">↓</a></div>
+      </div>
+    </section>
+    <div class="service-strip"><div class="shell grid grid-cols-1 sm:grid-cols-3 gap-4"><p><span aria-hidden="true">01</span> Encuentra tu favorito</p><p><span aria-hidden="true">02</span> Arma tu selección</p><p><span aria-hidden="true">03</span> Pide en línea</p></div></div>
+    <section id="catalogo" aria-labelledby="catalog-title" class="catalog-section section-space">
+      <div class="shell">
+        <div class="section-heading flex flex-col md:flex-row md:items-end justify-between gap-5"><div><p class="eyebrow">LA SELECCIÓN MICHOKS</p><h2 id="catalog-title" tabindex="-1">Tu gusto. <em>Tu botella.</em></h2></div><p>Desde un clásico hasta algo diferente.<br>Todo empieza por elegir.</p></div>
+        <div class="catalog-tools flex flex-col lg:flex-row gap-4 justify-between">
+          <div class="category-tabs flex flex-wrap gap-2" role="group" aria-label="Filtrar productos"></div>
+          <label class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><span class="sr-only">Buscar productos</span><input id="product-search" type="search" placeholder="Busca tu favorito…" autocomplete="off"></label>
+        </div>
+        <div id="active-filters" class="active-filters" hidden><p id="active-filters-label"></p><button id="clear-active-filters" type="button">Limpiar filtros <span aria-hidden="true">×</span></button></div>
+        <div class="catalog-meta flex flex-wrap items-center justify-between gap-3"><p id="results-count" role="status">Cargando catálogo…</p><label class="sort-label">Presupuesto <select id="product-budget"><option value="all">Todos los precios</option><option value="20">Hasta $20</option><option value="40">Hasta $40</option><option value="70">Hasta $70</option></select></label><label class="sort-label">Ordenar por <select id="product-sort"><option value="featured">Selección Michoks</option><option value="price-asc">Menor precio</option><option value="price-desc">Mayor precio</option><option value="name">Nombre A–Z</option></select></label></div>
+        <div id="product-grid" class="product-grid grid grid-cols-1 min-[360px]:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10"></div>
+        <div class="catalog-more"><button id="load-more-products" class="primary-button" type="button" hidden>Ver más productos <span aria-hidden="true">+</span></button></div>
+        <div id="empty-products" class="empty-products" hidden><p class="text-2xl font-bold">No encontramos esa botella.</p><p>Prueba otra palabra o vuelve a ver toda la selección.</p><button id="reset-filters" class="primary-button" type="button">Ver todos los productos <span aria-hidden="true">↗</span></button></div>
+        <p class="catalog-disclaimer">Precios en USD. Las fotografías son de referencia y el empaque puede variar.</p>
+        <noscript><p>Activa JavaScript para usar el catálogo y el carrito. También puedes <a href="https://wa.me/593959862988" target="_blank" rel="noopener noreferrer">consultar la selección por WhatsApp</a>.</p></noscript>
+      </div>
+    </section>
+    <section id="destacados" aria-labelledby="discover-title" class="discover-section section-space">
+      <div class="shell">
+        <div class="section-heading discovery-heading"><div><p class="eyebrow">ELIGE EL PLAN. ENCUENTRA TU BOTELLA.</p><h2 id="discover-title">Un buen momento.<br><em>Una buena elección.</em></h2></div><p>No necesitas conocer todas las etiquetas.<br>Empieza por lo que tienes en mente.</p></div>
+        <div class="occasion-grid">
+          <article class="occasion-card occasion-gift"><div class="occasion-photo"><img src="assets/products/old-parr-12.jpg" width="800" height="800" alt="" loading="lazy"><span class="occasion-number" aria-hidden="true">01</span></div><div class="occasion-copy"><p class="eyebrow">UN DETALLE CON CARÁCTER</p><h3>Para regalar.</h3><p>Whiskys y botellas especiales para un detalle bien elegido.</p><button class="inline-action" type="button" data-occasion="regalo">Encontrar un regalo <span aria-hidden="true">↗</span></button></div></article>
+          <article class="occasion-card occasion-dinner"><div class="occasion-photo"><img src="assets/products/casillero-cabernet.jpg" width="800" height="800" alt="" loading="lazy"><span class="occasion-number" aria-hidden="true">02</span></div><div class="occasion-copy"><p class="eyebrow">PARA ACOMPAÑAR LA MESA</p><h3>Una buena cena.</h3><p>Vinos y aperitivos para acompañar la conversación.</p><button class="inline-action" type="button" data-occasion="cena">Elegir para la mesa <span aria-hidden="true">↗</span></button></div></article>
+          <article class="occasion-card occasion-mix"><div class="occasion-photo"><img src="assets/products/tanqueray.webp" width="800" height="800" alt="" loading="lazy"><span class="occasion-number" aria-hidden="true">03</span></div><div class="occasion-copy"><p class="eyebrow">TU TOQUE PERSONAL</p><h3>Mixología en casa.</h3><p>Rones, gins y vodkas para explorar nuevas combinaciones.</p><button class="inline-action" type="button" data-occasion="cocteles">Explorar combinaciones <span aria-hidden="true">↗</span></button></div></article>
+          <article class="occasion-card occasion-share"><div class="occasion-photo"><img src="assets/products/club-verde.png" width="800" height="800" alt="" loading="lazy"><span class="occasion-number" aria-hidden="true">04</span></div><div class="occasion-copy"><p class="eyebrow">LO SIMPLE TAMBIÉN SE DISFRUTA</p><h3>Para compartir.</h3><p>Cervezas y opciones prácticas para reuniones entre adultos.</p><button class="inline-action" type="button" data-occasion="compartir">Ver opciones para compartir <span aria-hidden="true">↗</span></button></div></article>
+        </div>
+        <div class="discovery-guide"><div><p class="eyebrow">¿PREFIERES IR DIRECTO?</p><p>Descubre las nuevas categorías.</p></div><div class="discovery-shortcuts"><button type="button" class="inline-action" data-category="Rones">Rones ↗</button><button type="button" class="inline-action" data-category="Gins">Gins ↗</button><button type="button" class="inline-action" data-category="Licores">Licores ↗</button></div></div>
+      </div>
+    </section>
+    <section id="nosotros" aria-labelledby="story-title" class="story-section section-space">
+      <div class="shell">
+        <div class="about-heading"><div><p class="eyebrow">ACERCA DE NOSOTROS</p><h2 id="story-title" tabindex="-1">El buen gusto<br>se <em>comparte.</em></h2></div><p>En MICHOKS creemos que elegir una botella debe ser tan agradable como el momento que la acompaña. Te acercamos un catálogo variado y una forma sencilla de consultar tu selección.</p></div>
+        <div class="purpose-grid">
+          <article class="purpose-card"><span class="purpose-symbol" aria-hidden="true">↗</span><p class="eyebrow">NUESTRO PROPÓSITO</p><h3>Misión.</h3><p>Acercar una selección diversa de licores a personas adultas, ayudándolas a elegir con información clara, atención cercana y una experiencia de compra sencilla que promueva el consumo responsable.</p></article>
+          <article class="purpose-card"><span class="purpose-symbol" aria-hidden="true">✦</span><p class="eyebrow">HACIA DÓNDE VAMOS</p><h3>Visión.</h3><p>Ser una licorería de referencia por la confianza, la variedad y el cuidado de cada experiencia; un lugar donde descubrir nuevas opciones y recibir orientación para elegir con tranquilidad.</p></article>
+        </div>
+        <div class="about-values"><p>Variedad para elegir.</p><p>Claridad para decidir.</p><p>Responsabilidad para disfrutar.</p><a class="text-link" href="https://wa.me/593959862988" target="_blank" rel="noopener noreferrer">Conversemos por WhatsApp <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="michoks-footer"><div class="shell pwa-controls"><button id="install-app" class="text-link" type="button" hidden>Instalar MICHOKS ↗</button><p id="connection-status" role="status" hidden></p></div><div class="shell"><div class="footer-top flex flex-col sm:flex-row justify-between gap-6"><p class="eyebrow">TU PRÓXIMO BRINDIS EMPIEZA AQUÍ.</p><div class="flex flex-wrap gap-6"><a href="#catalogo">Catálogo</a><a href="#destacados">Descubre</a><a href="#nosotros">Acerca de nosotros</a><a href="https://wa.me/593959862988" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><a href="#inicio">Volver arriba ↑</a></div></div><p class="footer-wordmark" aria-hidden="true">MICHOKS<span>✦</span></p><div class="footer-bottom flex flex-col sm:flex-row justify-between gap-3"><p>MICHOKS · Licorería</p><p>Venta exclusiva a mayores de 18 años. Disfruta con responsabilidad.</p></div></div></footer>
+  <dialog id="cart-drawer" class="cart-drawer" aria-labelledby="cart-title">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <div><p class="eyebrow">UNA BUENA ELECCIÓN, SIEMPRE.</p><h2 id="cart-title">Tu próximo <em>brindis.</em></h2><p class="cart-header-caption">Tu selección, a tu manera.</p></div>
+        <button class="close-button" type="button" aria-label="Cerrar carrito" data-close-cart>×</button>
+      </div>
+      <div class="cart-layout">
+        <section class="cart-selection" aria-label="Productos seleccionados">
+          <button id="import-legacy-cart" class="text-link" type="button" hidden>Recuperar mi selección anterior</button><div class="cart-toolbar"><p id="cart-summary" role="status"></p><button id="clear-cart" type="button" hidden>Vaciar carrito</button></div>
+          <div class="cart-undo" id="cart-undo" hidden><p id="cart-undo-message" role="status"></p><button id="undo-cart" type="button">Deshacer ↶</button></div>
+          <p id="cart-feedback" class="cart-feedback" role="status"></p>
+          <div id="cart-items" class="cart-items"></div>
+          <section id="cart-recommendations" class="cart-recommendations" aria-labelledby="recommendations-title"><p class="eyebrow">ALGO MÁS PARA COMPARTIR</p><h3 id="recommendations-title">Completa el momento.</h3><div id="recommendation-items"></div></section>
+          <button class="continue-shopping" type="button" data-discover-catalog>← Seguir explorando el catálogo</button>
+        </section>
+        <aside class="cart-footer" aria-label="Resumen y consulta">
+          <p class="eyebrow">CASI LISTO PARA BRINDAR</p><h3 class="summary-heading">Tu selección.</h3>
+          <div class="summary-row"><span>Productos <span id="summary-units"></span></span><strong id="cart-subtotal">$0.00</strong></div>
+          <div class="summary-row"><span>Modalidad</span><span id="delivery-summary">Retiro en tienda</span></div><p id="delivery-hint" class="field-hint">Coordinaremos contigo el punto y horario de retiro.</p>
+          <div class="cart-total"><span>Total estimado <small>USD</small></span><strong id="cart-total">$0.00</strong></div>
+          <form id="order-form" aria-label="Datos necesarios para solicitar tu pedido">
+          <div id="order-preferences" class="order-preferences">
+            <fieldset class="delivery-options"><legend>¿Cómo prefieres recibirlo?</legend><div><label><input type="radio" name="delivery" value="retiro" checked><span>Retiro en tienda</span></label><label><input type="radio" name="delivery" value="domicilio"><span>A domicilio</span></label></div></fieldset>
+            <fieldset id="delivery-address" class="delivery-address" hidden disabled>
+              <legend>Dirección de entrega</legend>
+              <div class="customer-field"><label for="customer-city">Ciudad</label><input id="customer-city" name="ciudad" maxlength="100" autocomplete="address-level2" required></div>
+              <div class="customer-field"><label for="customer-address">Calle, número y sector</label><input id="customer-address" name="direccion" maxlength="300" autocomplete="street-address" required></div>
+            </fieldset>
+            <div class="customer-field"><label for="order-note">Nota para la tienda (opcional)</label><input id="order-note" name="observacion" maxlength="1000"></div>
+          </div>
+          <p class="cart-note">El envío, si corresponde, se calcula por separado.</p>
+          <button id="checkout-button" class="primary-button w-full" type="submit" disabled><span class="checkout-label">Registrar pedido</span><span aria-hidden="true">↗</span></button>
+          </form>
+          <p id="availability-note" class="field-error" hidden>Ajusta las cantidades de los productos agotados o con stock insuficiente.</p>
+          <p class="checkout-status" id="checkout-status" role="status"></p>
+
+          <p class="responsible-note">Consulta tus pedidos en <a class="text-link" href="?vista=cuenta#pedidos">Mi cuenta</a>.</p>
+        </aside>
+      </div>
+      <div id="cart-mobile-summary" class="cart-mobile-summary" hidden><div><span>Total estimado</span><strong id="mobile-cart-total">$0.00</strong></div><button id="review-order" class="primary-button" type="button">Ver resumen <span aria-hidden="true">↗</span></button></div>
+    </div>
+  </dialog>
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="detail-title"><button class="close-button dialog-close" type="button" aria-label="Cerrar detalle">×</button><div id="dialog-content"></div></dialog>
+  <button id="cart-mini" class="cart-mini" type="button" aria-controls="cart-drawer" aria-haspopup="dialog" hidden><span class="mini-icon" aria-hidden="true">↗</span><span>Ver mi selección <small id="mini-units"></small></span><strong id="mini-total"></strong></button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </div>
+
+</body>
+</html>
